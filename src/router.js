@@ -3,22 +3,28 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-import menu from './App.vue';
+// 引入页面
+import App_menu from './App.menu.vue';
 
+// 配置路由
 const router = new VueRouter({
-    routes: [{
-        path: '/',
-        redirect: 'menu'
-    },
-    {
-        path: '/menu',
-        component: menu
-    },
-    {
-        path: '/*',
-        redirect: 'menu'
-    }
-    ]
+    routes: [
+        /**
+         * 菜单页面
+         * --------------------
+         */
+        {
+            path: '/menu',
+            component: App_menu
+        },
+        /**
+         * --------------------
+         * 默认路由
+         */
+        {
+            path: '/*',
+            redirect: 'menu'
+        }]
 });
 
 export default router;
