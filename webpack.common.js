@@ -1,4 +1,5 @@
 const { VueLoaderPlugin } = require('vue-loader');
+
 module.exports = {
     entry: ['./src/entry.js'],
     output: {
@@ -17,6 +18,12 @@ module.exports = {
         }, {
             test: /\.css$/,
             use: ['vue-style-loader', 'css-loader']
+        }, {
+            test: /\.scss$/,
+            use: ["vue-style-loader", "css-loader", "sass-loader"]
+        }, {
+            test: /\.(png|jpg|jpeg|gif|bmp)$/,
+            use: ['file-loader?limit=7000&name=build/image/[name].[ext]']
         }]
     },
     plugins: [
