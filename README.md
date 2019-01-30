@@ -6,13 +6,13 @@
 默认情况下，你直接点击index.html即可通过file的方式查看，如果你修改了代码需要生效，执行下面命令：
 
 ```bash
-npm run release
+npm install && npm run release
 ```
 
 如果你希望通过http方式访问，修改文件后及时生效，请执行下面命令：
 
 ```bash
-npm run dev
+npm install && npm run dev
 ```
 
 ### 免责声明
