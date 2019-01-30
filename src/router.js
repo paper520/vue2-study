@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 // 引入页面
 import App_menu from './App.menu.vue';
-import clayjs_canvas2d_cgxxzlsjt from './pages/clayjs/canvas2d/cgxxzlsjt/page.vue';
+import clayjs_canvas2d_tree_circle from './pages/clayjs/canvas2d/tree.circle.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -23,8 +23,8 @@ const router = new VueRouter({
          */
         {
             // 采购信息总览数据图
-            path: '/clayjs/canvas2d/cgxxzlsjt',
-            component: clayjs_canvas2d_cgxxzlsjt
+            path: '/clayjs/canvas2d/tree.circle',
+            component: clayjs_canvas2d_tree_circle
         },
         /**
          * 3.默认路由

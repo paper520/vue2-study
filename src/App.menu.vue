@@ -5,17 +5,35 @@
     </header>
     <ul>
       <li>
-        <img @click="loadPage('clayjs/canvas2d/cgxxzlsjt')" src="./assets/menu/1.png" alt="数据可视化 / canvas2d" />
-        <label>采购信息总览数据图</label>
+        <img @click="loadPage('clayjs/canvas2d/tree.circle')" src="./assets/menu/1.png" />
+        <label>圆形树</label>
         <em>canvas</em>
         <em>region</em>
         <em>layer</em>
         <em>clay.js</em>
         <p>
-          本用例用于实验在vue2.js环境中，如何更好的使用clay.js实现web端2d数据可视化，为clay.js的改进工作提供一定的经验支持。
+          绘制一个圆形树，可交互点击和悬浮信息提示。
         </p>
         <p>
-          基于clay.js系列项目开发，主要涉及canvas 2d相关技术，重点是图层、区域、绘图和布局等的使用。
+          基于clay.js系列项目开发，主要涉及canvas 2d相关技术，重点是图层、区域和布局等的使用，包括绘图经验的积累和对clay.js优化的反馈建议。
+        </p>
+        <hr />
+        <p>
+          涉及的主要开源项目：
+          <ul>
+            <li>
+              1.clay-core：
+              <a :href="clay_core" target="_blank">{{clay_core}}</a>
+            </li>
+            <li>
+              2.clay-2d：
+              <a :href="clay_2d" target="_blank">{{clay_2d}}</a>
+            </li>
+            <li>
+              3.clay-chart：
+              <a :href="clay_chart" target="_blank">{{clay_chart}}</a>
+            </li>
+          </ul>
         </p>
       </li>
     </ul>
@@ -27,6 +45,16 @@
 
 <script>
 export default {
+  data() {
+    return {
+
+      // 开源项目地址
+      clay_core: "https://github.com/yelloxing/clay-core",
+      clay_2d: "https://github.com/yelloxing/clay-2d",
+      clay_chart: "https://github.com/yelloxing/clay-chart"
+      
+    };
+  },
   methods: {
     loadPage(url) {
       window.location.href = "#/" + url;
