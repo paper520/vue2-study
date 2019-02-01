@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 // 引入页面
 import App_menu from './App.menu.vue';
-import clayjs_canvas2d_tree_circle from './pages/clayjs/canvas2d/tree.circle.vue';
+import tree_circle_clayjs from './pages/tree.circle.clayjs.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -23,8 +23,8 @@ const router = new VueRouter({
          */
         {
             // 采购信息总览数据图
-            path: '/clayjs/canvas2d/tree.circle',
-            component: clayjs_canvas2d_tree_circle
+            path: '/tree.circle.clayjs',
+            component: tree_circle_clayjs
         },
         /**
          * 3.默认路由

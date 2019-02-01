@@ -5,8 +5,8 @@
     </header>
     <ul>
       <li>
-        <img @click="loadPage('clayjs/canvas2d/tree.circle')" src="./assets/menu/1.png" />
-        <label>圆形树</label>
+        <img @click="loadPage('tree.circle.clayjs')" src="./assets/menu/1.png" />
+        <label>clay.js使用测试</label>
         <em>canvas</em>
         <em>tree</em>
         <em>clay.js</em>

@@ -3,7 +3,7 @@
 </template>
 <script>
 // 获取数据
-import data from "../../../assets/data/program.json";
+import data from "../assets/data/program.json";
 
 // 获取绘图工具
 import { $$ } from "clay-core";
