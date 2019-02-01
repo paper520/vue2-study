@@ -8,14 +8,13 @@
         <img @click="loadPage('clayjs/canvas2d/tree.circle')" src="./assets/menu/1.png" />
         <label>圆形树</label>
         <em>canvas</em>
-        <em>region</em>
-        <em>layer</em>
+        <em>tree</em>
         <em>clay.js</em>
         <p>
-          绘制一个圆形树，可交互点击和悬浮信息提示。
+          绘制一个圆形树，动画展开。
         </p>
         <p>
-          基于clay.js系列项目开发，主要涉及canvas 2d相关技术，重点是图层、区域和布局等的使用，包括绘图经验的积累和对clay.js优化的反馈建议。
+          基于clay.js系列项目开发，主要测试基本的接口在vue2中的使用情况，包括绘图经验的积累和对clay.js优化的反馈建议。
         </p>
         <hr />
         <p>
@@ -47,12 +46,10 @@
 export default {
   data() {
     return {
-
       // 开源项目地址
       clay_core: "https://github.com/yelloxing/clay-core",
       clay_2d: "https://github.com/yelloxing/clay-2d",
       clay_chart: "https://github.com/yelloxing/clay-chart"
-      
     };
   },
   methods: {
