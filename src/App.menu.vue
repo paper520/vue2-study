@@ -6,7 +6,7 @@
     <ul>
       <li>
         <img @click="loadPage('tree.circle.clayjs')" src="./assets/menu/1.png" />
-        <label>clay.js使用测试</label>
+        <label @click="loadPage('tree.circle.clayjs')">clay.js使用测试</label>
         <em>canvas</em>
         <em>tree</em>
         <em>clay.js</em>
@@ -33,6 +33,15 @@
               <a :href="clay_chart" target="_blank">{{clay_chart}}</a>
             </li>
           </ul>
+        </p>
+      </li>
+      <li>
+        <label @click="loadPage('form.normal')">Form表单和基本的组件（或指令）</label>
+        <em>form</em>
+        <em>directive</em>
+        <em>component</em>
+        <p>
+          一个纯粹的表单，拥有错误控制功能和常见的控件用例，帮助在日常开发中，快速开发交易。
         </p>
       </li>
     </ul>
@@ -91,13 +100,14 @@ nav {
       margin-top: 0.2rem;
       & > img {
         width: 3.5rem;
-        float: left;
+        float: right;
         padding-right: 0.2rem;
         cursor: pointer;
       }
       & > label {
         line-height: 2em;
         color: #5c9287;
+        cursor: pointer;
       }
       & > em {
         font-size: 12px;
