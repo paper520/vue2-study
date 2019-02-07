@@ -35,15 +35,6 @@
           </ul>
         </p>
       </li>
-      <li>
-        <label @click="loadPage('form.normal')">Form表单和基本的组件（或指令）</label>
-        <em>form</em>
-        <em>directive</em>
-        <em>component</em>
-        <p>
-          一个纯粹的表单，拥有错误控制功能和常见的控件用例，帮助在日常开发中，快速开发交易。
-        </p>
-      </li>
     </ul>
     <footer>
       心叶 ©2007-2019 走一步，再走一步

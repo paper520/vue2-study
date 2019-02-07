@@ -6,7 +6,6 @@ Vue.use(VueRouter);
 // 引入页面
 import App_menu from './App.menu.vue';
 import tree_circle_clayjs from './pages/tree.circle.clayjs.vue';
-import form_normal from './pages/form.normal.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -25,9 +24,6 @@ const router = new VueRouter({
         {
             path: '/tree.circle.clayjs',
             component: tree_circle_clayjs
-        }, {
-            path: '/form.normal',
-            component: form_normal
         },
         /**
          * 3.默认路由

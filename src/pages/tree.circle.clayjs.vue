@@ -12,7 +12,7 @@ import { tree } from "clay-chart";
 
 export default {
   mounted() {
-    const canvas_size = 800;
+    const canvas_size = 700;
 
     /**
      * 1.准备画布和绘图对象
@@ -81,8 +81,8 @@ export default {
           // 绘制结点
           painter.beginPath();
           painter.fillStyle = "rgb(234, 119, 158)";
-          painter.moveTo(data.left + 5, data.top);
-          painter.arc(data.left, data.top, 5, 0, Math.PI * 2);
+          painter.moveTo(data.left + 2, data.top);
+          painter.arc(data.left, data.top, 2, 0, Math.PI * 2);
           painter.fill();
 
           // 文字
