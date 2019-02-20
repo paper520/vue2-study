@@ -1,6 +1,6 @@
 {
-    "name": "vue2.0-study",
-    "description": "学习和记录vue2.0使用心得的地方，帮助快速开发。",
+    "name": "vue2-study",
+    "description": "学习和记录vue2使用心得的地方，帮助快速开发。",
     "main": "build/main.js",
     "scripts": {
         "dev": "node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
@@ -9,12 +9,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yelloxing/vue2.0-study.git"
+        "url": "git+https://github.com/yelloxing/vue2-study.git"
     },
     "author": "心叶",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/yelloxing/vue2.0-study/issues"
+        "url": "https://github.com/yelloxing/vue2-study/issues"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",

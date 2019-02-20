@@ -5,7 +5,7 @@ Vue.use(VueRouter);
 
 // 引入页面
 import App_menu from './App.menu.vue';
-import tree_circle_clayjs from './pages/tree.circle.clayjs.vue';
+import clayjs from './pages/clayjs.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -22,8 +22,8 @@ const router = new VueRouter({
          * 2.交易页面
          */
         {
-            path: '/tree.circle.clayjs',
-            component: tree_circle_clayjs
+            path: '/clayjs',
+            component: clayjs
         },
         /**
          * 3.默认路由

@@ -1,38 +1,15 @@
 <template>
   <nav>
     <header>
-      》学习和记录vue2.0使用心得的地方，帮助快速开发《
+      》学习和记录vue2使用心得的地方，帮助快速开发《
     </header>
     <ul>
       <li>
-        <img @click="loadPage('tree.circle.clayjs')" src="./assets/menu/1.png" />
-        <label @click="loadPage('tree.circle.clayjs')">clay.js使用测试</label>
-        <em>canvas</em>
-        <em>tree</em>
-        <em>clay.js</em>
+        <label @click="loadPage('clayjs')">
+          数据可视化之clay.js
+        </label>
         <p>
-          绘制一个圆形树，动画展开。
-        </p>
-        <p>
-          基于clay.js系列项目开发，主要测试基本的接口在vue2中的使用情况，包括绘图经验的积累和对clay.js优化的反馈建议。
-        </p>
-        <hr />
-        <p>
-          涉及的主要开源项目：
-          <ul>
-            <li>
-              1.clay-core：
-              <a :href="clay_core" target="_blank">{{clay_core}}</a>
-            </li>
-            <li>
-              2.clay-2d：
-              <a :href="clay_2d" target="_blank">{{clay_2d}}</a>
-            </li>
-            <li>
-              3.clay-chart：
-              <a :href="clay_chart" target="_blank">{{clay_chart}}</a>
-            </li>
-          </ul>
+          测试vue2环境下通过包管理的方式使用clay.js绘制图形！
         </p>
       </li>
     </ul>
@@ -46,10 +23,7 @@
 export default {
   data() {
     return {
-      // 开源项目地址
-      clay_core: "https://github.com/yelloxing/clay-core",
-      clay_2d: "https://github.com/yelloxing/clay-2d",
-      clay_chart: "https://github.com/yelloxing/clay-chart"
+     
     };
   },
   methods: {
@@ -89,25 +63,10 @@ nav {
       background-color: #fff;
       padding: 0.2rem;
       margin-top: 0.2rem;
-      & > img {
-        width: 3.5rem;
-        float: right;
-        padding-right: 0.2rem;
-        cursor: pointer;
-      }
       & > label {
         line-height: 2em;
         color: #5c9287;
         cursor: pointer;
-      }
-      & > em {
-        font-size: 12px;
-        border: 1px solid gray;
-        border-radius: 1em;
-        padding: 0.01rem 0.05rem;
-        color: gray;
-        float: right;
-        margin-right: 0.1rem;
       }
       & > p {
         text-indent: 2em;
