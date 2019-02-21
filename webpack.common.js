@@ -21,10 +21,10 @@ module.exports = {
             exclude: /node_modules/
         }, {
             test: /\.css$/,
-            use: ['vue-style-loader', 'css-loader']
+            use: ['vue-style-loader', 'css-loader', 'postcss-loader']
         }, {
             test: /\.scss$/,
-            use: ["vue-style-loader", "css-loader", "sass-loader"]
+            use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
         }, {
             test: /\.(png|jpg|jpeg|gif|bmp)$/,
             use: ['file-loader?limit=7000&name=build/image/[name].[ext]']
