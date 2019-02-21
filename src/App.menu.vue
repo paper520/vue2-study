@@ -4,12 +4,12 @@
       》学习和记录vue2使用心得的地方，帮助快速开发《
     </header>
     <ul>
-      <li>
-        <label @click="loadPage('clayjs')">
-          数据可视化之clay.js
+      <li v-for='(value, key, index) in pages' :key='index'>
+        <label @click="loadPage(key)">
+          {{value.title}}
         </label>
-        <p>
-          测试vue2环境下通过包管理的方式使用clay.js绘制图形！
+        <p v-for='(item, index) in value.info' :key='index'>
+          {{item}}
         </p>
       </li>
     </ul>
@@ -23,7 +23,16 @@
 export default {
   data() {
     return {
-     
+      pages: {
+        clayjs: {
+          title: "数据可视化之clay.js",
+          info: ["测试vue2环境下通过包管理的方式使用clay.js绘制图形！"]
+        },
+        elementui: {
+          title: "桌面端组件之ElementUI",
+          info: ["测试基本的表单功能和校验。"]
+        }
+      }
     };
   },
   methods: {
