@@ -28,9 +28,11 @@ export default {
           title: "数据可视化之clay.js",
           info: ["测试vue2环境下通过包管理的方式使用clay.js绘制图形！"]
         },
-        elementui: {
-          title: "桌面端组件之ElementUI",
-          info: ["测试基本的表单功能和校验。"]
+        veevalidate: {
+          title: "表单校验之vee-validate",
+          info: [
+            "基于vee-validate测试表单校验相关功能，常用的自定义日历、下拉等相关组件！"
+          ]
         }
       }
     };

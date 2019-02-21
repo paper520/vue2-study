@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 // 引入页面
 import App_menu from './App.menu.vue';
 import clayjs from './pages/clayjs.vue';
-import elementui from './pages/ElementUI.vue';
+import veevalidate from './pages/vee-validate.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -26,8 +26,8 @@ const router = new VueRouter({
             path: '/clayjs',
             component: clayjs
         }, {
-            path: '/elementui',
-            component: elementui
+            path: '/veevalidate',
+            component: veevalidate
         },
         /**
          * 3.默认路由
