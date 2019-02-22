@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import router from './router';
-import VeeValidate from 'vee-validate';
+import VeeValidate, { Validator } from 'vee-validate';
 import zh_CN from './assets/locale/zh_CN';
 import VueI18n from 'vue-i18n';
 
@@ -11,6 +11,16 @@ Vue.use(VueI18n);
 
 var i18n = new VueI18n({
     locale: 'zh_CN',
+});
+
+/**
+ * 自定义规则
+ * ========================
+ */
+Validator.extend('ruleSelf', {
+    validate: function (value) {
+        return /^\d{4,14}$/.test(value);
+    }
 });
 
 Vue.use(VeeValidate, {

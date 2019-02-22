@@ -6,9 +6,6 @@
   var n, e = {
     name: "zh_CN",
     messages: {
-      _default: function (n) {
-        return n + "的值无效"
-      },
       after: function (n, e) {
         var t = e[0];
         return n + "必须在" + t + "之后" + (e[1] ? "或等于" + t : "")
