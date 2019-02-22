@@ -31,7 +31,7 @@ export default {
         veevalidate: {
           title: "表单校验之vee-validate",
           info: [
-            "基于vee-validate测试表单校验相关功能，常用的自定义日历、下拉等相关组件！"
+            "基于vee-validate测试表单校验相关功能！"
           ]
         }
       }

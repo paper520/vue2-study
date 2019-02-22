@@ -2,7 +2,7 @@
   <form>
     <div>
       <label for="email">邮箱</label>
-      <input v-validate v-model="email" data-rules="required|email" name="email" type="text" />
+      <input v-validate="'required|email'" v-model="email" name="email" type="text" />
     </div>
     <hr /> {{errors.first('email')}}
     <hr />
