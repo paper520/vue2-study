@@ -35,6 +35,10 @@ export default {
         datepicker: {
           title: "自定义指令测试之日历datepicker",
           info: ["测试在全局中注册和使用自定义指令相关事项！"]
+        },
+        numberChinese: {
+          title: "中文大写过滤器numberChinese",
+          info: ["测试自定义过滤器参数等基本问题！"]
         }
       }
     };

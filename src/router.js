@@ -8,6 +8,7 @@ import App_menu from './App.menu.vue';
 import clayjs from './html/clayjs.vue';
 import veevalidate from './html/vee-validate.vue';
 import datepicker from './html/v-datepicker.vue';
+import numberChinese from './html/numberChinese.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -32,6 +33,9 @@ const router = new VueRouter({
         }, {
             path: '/datepicker',
             component: datepicker
+        }, {
+            path: '/numberChinese',
+            component: numberChinese
         },
         /**
          * 3.默认路由
