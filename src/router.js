@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 import App_menu from './App.menu.vue';
 import clayjs from './pages/clayjs.vue';
 import veevalidate from './pages/vee-validate.vue';
+import datepicker from './pages/v-datepicker.vue';
 
 // 配置路由
 const router = new VueRouter({
@@ -28,6 +29,9 @@ const router = new VueRouter({
         }, {
             path: '/veevalidate',
             component: veevalidate
+        }, {
+            path: '/datepicker',
+            component: datepicker
         },
         /**
          * 3.默认路由

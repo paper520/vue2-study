@@ -30,9 +30,11 @@ export default {
         },
         veevalidate: {
           title: "表单校验之vee-validate",
-          info: [
-            "基于vee-validate测试表单校验相关功能！"
-          ]
+          info: ["基于vee-validate测试表单校验相关功能！"]
+        },
+        datepicker: {
+          title: "自定义指令测试之日历datepicker",
+          info: ["测试在全局中注册和使用自定义指令相关事项！"]
         }
       }
     };

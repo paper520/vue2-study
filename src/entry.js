@@ -7,6 +7,9 @@ import VueI18n from 'vue-i18n';
 // 引入基础css
 import '../node_modules/easycss-core/build/easycss.min.css';
 
+// 引入指令
+import './directive/datepicker';
+
 Vue.use(VueI18n);
 
 var i18n = new VueI18n({
