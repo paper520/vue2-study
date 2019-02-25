@@ -98,15 +98,42 @@ Vue.directive('datepicker', {
         * =====================
         */
 
-        // 十年视图，选择年
-        const toDecadeView = function (firstYear, year) {
-
-        };
-
         // 年视图，选择月份
         const toYearView = function (year) {
 
+          /**
+           * 顶部
+           * =====================
+           */
+          top_dom[0].innerHTML = "<span>&lt;</span><span><!--标题--></span><span>&gt;</span>";
+          let spans = top_dom.find('span');
+          spans[1].innerText = year + '年';
 
+          // 点击前一年
+          spans.eq(0).bind('click', function () { toYearView(year - 1); });
+
+          // 点击后一年
+          spans.eq(2).bind('click', function () { toYearView(year + 1); });
+
+          /**
+           * 内容
+           * =====================
+           */
+          let template = "";
+          for (let i = 1; i <= 12; i++) template += '<li class="item month" val=' + i + '>' + i + '</li>';
+
+          content_dom[0].innerHTML = template;
+
+          // 追加今天和选中标识
+          if (year == curYear) $$('[val=' + curMonth + ']').attr('current', 'yes');
+          if (year == selYear) $$('[val=' + selMonth + ']').attr('select', 'yes');
+
+          // 选择月点击事件
+          content_dom.find('.item').bind('click', function () {
+
+            toMonthView(year, this.innerText);
+
+          });
 
         };
 
@@ -135,18 +162,16 @@ Vue.directive('datepicker', {
           // 点击下个月
           spans.eq(2).bind('click', function () {
             if (month >= 12) {
-              year += 1;
+              year -= -1;
               month = 1;
             } else {
-              month += 1;
+              month -= -1;
             }
             toMonthView(year, month);
           });
 
           // 点击标题
-          spans.eq(1).bind('click', function () {
-            toYearView(year);
-          });
+          spans.eq(1).bind('click', function () { toYearView(year); });
 
           /**
            * 内容
@@ -155,11 +180,11 @@ Vue.directive('datepicker', {
           let template = "";
 
           // 前置空白
-          const preDayNum = $date.getMonthBegin(month, year) % 7;
+          const preDayNum = $date.getMonthBegin(month - 1, year) % 7;
           for (let i = 0; i < preDayNum; i++) template += '<li class="blank day">&nbsp;</li>';
 
           // 实体内容
-          const curMonthDayNum = $date.getMonthDay(month, year);
+          const curMonthDayNum = $date.getMonthDay(month - 1, year);
           for (let i = 0; i < curMonthDayNum; i++) template += '<li class="item day" val=' + (i + 1) + '>' + (i + 1) + '</li>';
 
           content_dom[0].innerHTML = template;
