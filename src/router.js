@@ -5,9 +5,9 @@ Vue.use(VueRouter);
 
 // 引入页面
 import App_menu from './App.menu.vue';
-import clayjs from './pages/clayjs.vue';
-import veevalidate from './pages/vee-validate.vue';
-import datepicker from './pages/v-datepicker.vue';
+import clayjs from './html/clayjs.vue';
+import veevalidate from './html/vee-validate.vue';
+import datepicker from './html/v-datepicker.vue';
 
 // 配置路由
 const router = new VueRouter({

@@ -3,7 +3,7 @@
  * =============================
  */
 
-var monthDay = [31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const monthDay = [31, -1, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 export default {
 
@@ -25,7 +25,7 @@ export default {
    * @param {number} yearNum 如果是二月，年份是必须的
    */
   "getMonthDay": function (monthNum, yearNum) {
-    var dayNum = monthDay[monthNum];
+    let dayNum = monthDay[monthNum];
     if (dayNum == -1) {
       dayNum = this.getFebruaryDay(yearNum);
     }
@@ -40,7 +40,7 @@ export default {
    * @return {number} 1-7，分别表示星期一到星期日
    */
   "getMonthBegin": function (monthNum, yearNum) {
-    var beginMonth = new Date(yearNum + "/" + (monthNum - (-1)) + "/1").getDay();
+    let beginMonth = new Date(yearNum + "/" + (monthNum - (-1)) + "/1").getDay();
     return beginMonth == 0 ? 7 : beginMonth;
   }
 
