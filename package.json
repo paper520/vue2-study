@@ -35,6 +35,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "clay-2d": "^2.0.0",
     "clay-chart": "^1.0.1",
     "clay-core": "^2.1.1",

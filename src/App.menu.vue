@@ -43,6 +43,10 @@ export default {
         original: {
           title: "自身规则",
           info: ["vue2自身的指令，过滤器等测试使用！"]
+        },
+        axios: {
+          title: "axios",
+          info: ["发送请求，和服务器交流测试！"]
         }
       }
     };
