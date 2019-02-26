@@ -14,7 +14,6 @@
 import Vue from 'vue';
 
 import $date from '../service/$date';
-import $event from '../service/$event';
 import $$ from 'clay-core';
 
 const monthLan = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
@@ -35,7 +34,7 @@ Vue.directive('datepicker', {
     // 选择的日期
     let selYear, selMonth, selDay;
 
-    $event.bind(el, 'click', function () {
+    $$(el).bind('click', function () {
 
       if (hadClick) {
         $$('#datepicker-' + uniqueId).remove();
