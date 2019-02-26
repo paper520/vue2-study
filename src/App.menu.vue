@@ -4,8 +4,8 @@
       》学习和记录vue2使用心得的地方，帮助快速开发《
     </header>
     <ul>
-      <li v-for='(value, key, index) in pages' :key='index'>
-        <label @click="loadPage(key)">
+      <li v-for='(value, key, index) in pages' :key='index' @click="loadPage(key)">
+        <label>
           {{value.title}}
         </label>
         <p v-for='(item, index) in value.info' :key='index'>
@@ -84,6 +84,7 @@ nav {
     margin: auto;
     margin-top: 0.7rem;
     & > li {
+      cursor: pointer;
       overflow: hidden;
       background-color: #fff;
       padding: 0.2rem;
@@ -91,7 +92,6 @@ nav {
       & > label {
         line-height: 2em;
         color: #5c9287;
-        cursor: pointer;
       }
       & > p {
         text-indent: 2em;
