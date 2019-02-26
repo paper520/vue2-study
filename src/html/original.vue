@@ -32,6 +32,18 @@
     <input type="radio" value="r-two" id='r-two' v-model="radio_flag" />
     <label for="r-two">r-two</label>
 
+    <hr />
+
+    <!-- 计算属性 -->
+    {{calc_value_}}
+
+    <hr />
+
+    <!-- watch -->
+    <input type="text" v-model='watch_flag_' /> {{watch_value_}}
+
+    <hr />
+
   </div>
 </template>
 
@@ -42,8 +54,29 @@ export default {
       flag: 0,
       item: ["零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"],
       checkbox_num: [],
-      radio_flag: "r-one"
+      radio_flag: "r-one",
+      watch_flag_: "",
+      watch_value_: ""
     };
+  },
+  computed: {
+    calc_value_: function() {
+      return "复选框：" + this.checkbox_num + ",单选框：" + this.radio_flag;
+    }
+    // 上面默认只有getter
+    // calc_value_: {
+    //   set:function(newValue){
+    //         //todo
+    //     },
+    //     get:function(){
+    //         //todo
+    //     }
+    // }
+  },
+  watch: {
+    watch_flag_: function(val) {
+      this.watch_value_ = val + Math.random(10);
+    }
   }
 };
 </script>
