@@ -39,6 +39,10 @@ export default {
         numberChinese: {
           title: "中文大写过滤器numberChinese",
           info: ["测试自定义过滤器参数等基本问题！"]
+        },
+        original: {
+          title: "自身规则",
+          info: ["vue2自身的指令，过滤器等测试使用！"]
         }
       }
     };
